@@ -27,14 +27,13 @@
     
       "reporter": "salty-cypress-testrail-reporter",
       "reporterOptions": {
-        "domain": "deepthiballa1.testrail.io/",
-        "username": "gulafshan.shaik@zemosolabs.com",
+        "domain": "gulshaik.testrail.io/",
+        "username": "gulafsha.aslp@gmail.com",
         "password": "Faygul224",
-        "projectId": 1,
-        "suiteId": 5,
-        "createTestRun": "false",
-        "runId": 9,
-        "runName": "Login"
+        "projectId": 2,
+        "suiteId": 2,
+        "createTestRun": true
+        
       }
     }
     
