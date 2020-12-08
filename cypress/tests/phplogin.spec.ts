@@ -21,7 +21,7 @@ describe ('Clicks on Login', function(){
 //       cy.get('.alert')
 //         .should("have.text", "Invalid Email or Password");
       
-    })
+   // })
 
       // Valid email, Invalid Password 
 //   it ("invalid Password", function(){
@@ -77,7 +77,7 @@ describe ('Clicks on Login', function(){
 //      .blur()
 //      .click
 //      cy.get('#loginfrm > .btn-primary').click
-})
+//})
 // likely want to do this in a support file
 // so it's applied to all spec files
 // cypress/support/index.js
