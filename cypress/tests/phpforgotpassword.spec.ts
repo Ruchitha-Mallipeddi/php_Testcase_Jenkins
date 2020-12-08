@@ -2,7 +2,7 @@ describe ('Forgot Password',function(){
 
     //forgot password  
    
-    it("Forgot Password C4", function(){
+    it("Forgot Password C3", function(){
      cy.visit('/')
      cy.get('.zoomInDown > :nth-child(3) > .btn').click()
      cy.get('#resetemail')
