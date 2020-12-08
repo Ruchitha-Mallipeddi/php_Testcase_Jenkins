@@ -1,7 +1,7 @@
 describe ('sign up successful',function(){
   // Valid Sign Up 
 
-  it("Sign up successful", function(){
+  it("Sign up successful C2", function(){
    cy.visit('https://www.phptravels.net/login')
    cy.get('.zoomInDown > :nth-child(1) > .btn')
    .click()
