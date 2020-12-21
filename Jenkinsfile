@@ -3,7 +3,7 @@ pipeline {
   	stages {
 		
 		
-		
+		withEnv(['export PATH=/usr/local/bin']){
 		stage('build') {
 			
   			steps {
@@ -13,6 +13,6 @@ pipeline {
 			}
   			}
 		}
-    
+	}
   	
 }
