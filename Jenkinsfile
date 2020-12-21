@@ -5,16 +5,16 @@ pipeline {
 		
 		
 		stage('build') {
-			wrap([$class: 'Xvfb', additionalOptions: '', assignedLabels: '', autoDisplayName: true, debug: true, displayNameOffset: 0, installationName: 'XVFB', parallelBuild: true, screen: '1024x758x24', timeout: 25]) {
+			
         steps {
                                 sh 'npm install -g yarn'
     				sh 'yarn install'
+		                sh 'docker run -v $PWD:/e2e -w /e2e cypress/included:6.1.0
     				sh 'yarn test:headless'
 			} 
         }
   			
   			}
 	
-	}
-  	
+	
 }
