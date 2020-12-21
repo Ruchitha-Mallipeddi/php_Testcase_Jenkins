@@ -1,7 +1,7 @@
 pipeline {
   agent any
   	stages {
-		
+		withEnv(['PATH+NODE=/home/z/cypress-PHPTravels-app/node_modules/bin']) {
 		stage('build') {
   			steps {
                                 sh "npm install -g yarn"
@@ -11,4 +11,5 @@ pipeline {
 		}
     
   	}
+}
 }
