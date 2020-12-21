@@ -1,9 +1,10 @@
 pipeline {
   agent any
-  	stages ('test') {
+  	stages {
 		
-		withEnv(['PATH+NODE=/home/z/cypress-PHPTravels-app/node_modules/bin']) {
+		
 		stage('build') {
+			withEnv(['PATH+NODE=/home/z/cypress-PHPTravels-app/node_modules/bin']) {
   			steps {
                                 sh "npm install -g yarn"
     				sh 'yarn install'
