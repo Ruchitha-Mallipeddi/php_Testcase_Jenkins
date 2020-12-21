@@ -3,7 +3,7 @@ pipeline {
   	stages {
 		
 		
-		withEnv(['export PATH=/usr/local/bin']){
+		withEnv(['/home/z/cypress-PHPTravels-app/node_modules/bin']){
 		stage('build') {
 			
   			steps {
