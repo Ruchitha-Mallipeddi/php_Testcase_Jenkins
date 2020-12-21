@@ -2,6 +2,9 @@
 pipeline {
   agent any
   	stages {
+		stage('E2E Tests') {
+    sh 'docker run -v $PWD:/e2e -w /e2e cypress/included:3.4.0'
+}
 		stage('build') {
   			steps {
     				sh 'yarn install'
