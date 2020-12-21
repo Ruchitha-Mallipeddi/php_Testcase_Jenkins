@@ -1,6 +1,7 @@
 pipeline {
   agent any
-  	stages {
+  	stages ('test') {
+		
 		withEnv(['PATH+NODE=/home/z/cypress-PHPTravels-app/node_modules/bin']) {
 		stage('build') {
   			steps {
