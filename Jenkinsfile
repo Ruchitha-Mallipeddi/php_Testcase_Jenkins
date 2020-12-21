@@ -3,7 +3,7 @@ pipeline {
   	stages {
 		
 		
-		withEnv(['/home/z/cypress-PHPTravels-app/node_modules/bin']){
+		
 		stage('build') {
 			
   			steps {
@@ -12,7 +12,7 @@ pipeline {
     				sh 'yarn test:headless'
 			}
   			}
-		}
+		
 	}
   	
 }
