@@ -5,23 +5,16 @@ pipeline {
 		
 		
 		stage('build') {
-			
-  			steps {
+			wrap([$class: 'Xvfb', additionalOptions: '', assignedLabels: '', autoDisplayName: true, debug: true, displayNameOffset: 0, installationName: 'XVFB', parallelBuild: true, screen: '1024x758x24', timeout: 25]) {
+        steps {
                                 sh 'npm install -g yarn'
     				sh 'yarn install'
     				sh 'yarn test:headless'
-			}
-  			}
-		parallel {
-        // start several test jobs in parallel, and they all
-        // will use Cypress Dashboard to load balance any found spec files
-        stage('tester A') {
-          steps {
-            echo "Running build ${env.BUILD_ID}"
-            sh "npm run e2e:record:parallel"
-          }
+			} 
         }
-}
+  			
+  			}
+	
 	}
   	
 }
