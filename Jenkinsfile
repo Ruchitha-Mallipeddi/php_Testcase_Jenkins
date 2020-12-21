@@ -12,8 +12,15 @@ pipeline {
     				sh 'yarn test:headless'
 			}
   			}
-		 stage('E2E Tests') {
-    sh 'docker run -v $PWD:/e2e -w /e2e cypress/included:3.4.0'
+		parallel {
+        // start several test jobs in parallel, and they all
+        // will use Cypress Dashboard to load balance any found spec files
+        stage('tester A') {
+          steps {
+            echo "Running build ${env.BUILD_ID}"
+            sh "npm run e2e:record:parallel"
+          }
+        }
 }
 	}
   	
