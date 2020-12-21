@@ -3,7 +3,7 @@ pipeline {
   	stages {
 		
 		
-		withEnv(['/home/z/cypress-PHPTravels-app/']) {
+		
 		stage('build') {
 			
   			steps {
