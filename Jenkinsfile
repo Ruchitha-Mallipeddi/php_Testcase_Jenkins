@@ -11,6 +11,7 @@ pipeline {
     				sh 'yarn install'
 		               
     				sh 'yarn test:headless'
+		                
 			} 
         }
   			
