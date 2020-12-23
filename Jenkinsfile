@@ -1,17 +1,11 @@
-
-pipeline {
-  agent any
-  	stages {
-		
-		stage('build')  {
-                  
-  			steps {
-    				sh 'yarn install'
-    				sh 'yarn test:headless'
-  			}
-		}
-    stage('E2E Tests') {
-    sh 'docker run -v $PWD:/e2e -w /e2e cypress/included:3.4.0'
-}
-  	}
-}
+node('master'){
+    stage('Clone sources') {
+        git credentialsId: 'CREDENTIALSID', url: 'GIT URL'
+    }
+    stage('install dependencies') {
+        sh 'yarn install'
+    }
+    stage('run tests') {
+      
+      sh 'yarn run test'
+    }
