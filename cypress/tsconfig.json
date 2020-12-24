@@ -10,5 +10,9 @@
     "**/*.ts",
     "support/index.d.ts",
     "../node_modules/@types/node/globals.d.ts", "support/Pageobjects/CSVTubeUpload.js"
-  ]
+  ],
+  {
+  "extends": "../tsconfig.json",
+  // ...
+}
 }
