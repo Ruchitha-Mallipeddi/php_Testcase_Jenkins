@@ -1,4 +1,7 @@
 pipeline {
+	triggers {
+        bitbucketPush()
+    }
   agent any
   	stages {
 		
