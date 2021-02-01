@@ -11,9 +11,7 @@ pipeline {
 			
         steps {
                                 
-    				sh 'npm install'
-		               
-    				sh 'npm test:headless'
+    				sh 'npx cypress run'
 		                
 			} 
         }
