@@ -11,9 +11,9 @@ pipeline {
 			
         steps {
                                 
-    				sh 'yarn install'
+    				sh 'npm install'
 		               
-    				sh 'yarn test:headless'
+    				sh 'npm test:headless'
 		                
 			} 
         }
