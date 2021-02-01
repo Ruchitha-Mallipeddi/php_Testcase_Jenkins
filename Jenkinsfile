@@ -17,8 +17,8 @@ pipeline {
         }
 		stage('run tests') {
 			
-        steps {
-                               	               
+        steps {               
+		                sh 'yarn run test',                               	               
     				sh 'yarn add salty-cypress-testrail-reporter --save-dev'	                
 		                sh 'yarn cypress run /home/ruchitha/php_Testcase_Jenkins/cypress/ --reporter salty-cypress-testrail-reporter'
 
