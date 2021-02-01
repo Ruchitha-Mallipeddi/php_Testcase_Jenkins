@@ -27,9 +27,9 @@
     
       "reporter": "salty-cypress-testrail-reporter",
       "reporterOptions": {
-        "domain": credentials('TESTRAIL_DOMAIN'),
-        "username": credentials('TESTRAIL_USERNAME'),
-        "password": credentials('TESTRAIL_PASSWORD'),
+        "domain": "cms2.testrail.io",
+        "username": "ruchitha.mallipeddi@zemosolabs.com",
+        "password": "Zb2up.YVEDFFzfKGSWWn",
         "projectId": 1,
         "suiteId": 1,
         "createTestRun": true
