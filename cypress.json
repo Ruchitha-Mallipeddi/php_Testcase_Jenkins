@@ -27,11 +27,11 @@
     
       "reporter": "salty-cypress-testrail-reporter",
       "reporterOptions": {
-        "domain": "gulshaik.testrail.io/",
-        "username": "gulafsha.aslp@gmail.com",
-        "password": "Faygul224",
-        "projectId": 2,
-        "suiteId": 3,
+        "domain": ${{ secrets.TESTRAIL_DOMAIN }},
+        "username": ${{ secrets.TESTRAIL_USERNAME }},
+        "password": ${{ secrets.TESTRAIL_PASSWORD }},
+        "projectId": 1,
+        "suiteId": 1,
         "createTestRun": true
         
       }
