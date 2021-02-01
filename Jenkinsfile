@@ -1,16 +1,24 @@
 pipeline {
+	triggers {
+        bitbucketPush()
+    }
   agent any
-  stages {
-    stage('build') {
-      steps {
-        sh 'CYPRESS_CACHE_FOLDER=$HOME/.cache/Cypress yarn install'
-      }
-    }
-    stage('test') {
-      steps {
-        sh 'CYPRESS_CACHE_FOLDER=$HOME/.cache/Cypress yarn test'
-      }
-    }
-  } 
-
+  	stages {
+		
+		
+		
+		stage('build') {
+			
+        steps {
+                                sh 'npm install -g yarn'
+    				sh 'yarn install'
+		               
+    				sh 'yarn test:headless'
+		                
+			} 
+        }
+  			
+  			}
+	
+	
 }
