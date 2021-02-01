@@ -1,12 +1,24 @@
 pipeline {
+	triggers {
+        githubPush()
+    }
   agent any
-  stages {
+  	stages {
+		
+		
+		
 		stage('build') {
-  steps {
-    sh 'yarn install'
-    sh 'yarn test:headless'
-  }
-		}
-    
-  }
+			
+        steps {
+                                sh 'npm install -g yarn'
+    				sh 'yarn install'
+		               
+    				sh 'yarn test:headless'
+		                
+			} 
+        }
+  			
+  			}
+	
+	
 }
