@@ -27,9 +27,9 @@
     
       "reporter": "salty-cypress-testrail-reporter",
       "reporterOptions": {
-        "domain": ${TESTRAIL_DOMAIN},
-        "username": ${TESTRAIL_USERNAME},
-        "password": ${TESTRAIL_PASSWORD},
+        "domain": credentials('TESTRAIL_DOMAIN'),
+        "username": credentials('TESTRAIL_USERNAME'),
+        "password": credentials('TESTRAIL_PASSWORD'),
         "projectId": 1,
         "suiteId": 1,
         "createTestRun": true
