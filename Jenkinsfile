@@ -10,8 +10,8 @@ pipeline {
 		stage('build') {
 			
         steps {
-                                
-    				sh 'npx cypress run'
+                                 sh 'npm i'
+    				 sh 'npm run cypress:ci'
 		                
 			} 
         }
