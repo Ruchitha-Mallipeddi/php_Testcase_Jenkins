@@ -1,6 +1,6 @@
 pipeline {
 	triggers {
-        bitbucketPush()
+        githubPush()
     }
   agent any
   	stages {
