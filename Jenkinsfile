@@ -20,7 +20,7 @@ pipeline {
         steps {
                                	               
     				sh 'yarn add salty-cypress-testrail-reporter --save-dev'	                
-		                sh 'yarn cypress run --reporter salty-cypress-testrail-reporter'
+		                sh 'yarn cypress run /home/ruchitha/php_Testcase_Jenkins/cypress/ --reporter salty-cypress-testrail-reporter'
 
 
 		                
