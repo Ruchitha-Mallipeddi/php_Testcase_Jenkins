@@ -2,7 +2,7 @@ describe ('Forgot Password',function(){
 
     //forgot password  
    
-    it("Forgot Password C3", function(){
+    it("Forgot Password C7", function(){
      cy.visit('/')
      cy.get('.zoomInDown > :nth-child(3) > .btn').click()
      cy.get('#resetemail')
@@ -14,7 +14,7 @@ describe ('Forgot Password',function(){
 });
 
 // Invalid email id 
-it("Valid email id", function(){
+it("Valid email id C8", function(){
     cy.visit('/')
     cy.get('.zoomInDown > :nth-child(3) > .btn') .click()
     cy.get('#resetemail')
@@ -26,7 +26,7 @@ it("Valid email id", function(){
 
      
    // Blank reset email
-it("Blank reset email", function(){
+it("Blank reset email C9", function(){
     cy.visit('/')
     cy.get('.zoomInDown > :nth-child(3) > .btn').click()
     cy.get('#resetemail')
