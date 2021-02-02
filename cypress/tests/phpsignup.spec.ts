@@ -1,7 +1,7 @@
 describe ('sign up successful',function(){
   // Valid Sign Up 
 
-  it("Sign up successful C2", function(){
+  it("Sign up successful C11", function(){
    cy.visit('https://www.phptravels.net/login')
    cy.get('.zoomInDown > :nth-child(1) > .btn')
    .click()
@@ -22,7 +22,7 @@ describe ('sign up successful',function(){
 });
 
 // Invalid Password and confirm password
-it("Incorrect Password", function(){
+it("Incorrect Password C12", function(){
   cy.visit('https://www.phptravels.net/login')
   cy.get('.zoomInDown > :nth-child(1) > .btn')
   .click()
