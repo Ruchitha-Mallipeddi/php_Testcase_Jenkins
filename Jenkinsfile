@@ -1,11 +1,15 @@
-node('master'){
-    stage('Clone sources') {
-        git credentialsId: 'CREDENTIALSID', url: 'GIT URL'
+pipeline {
+  agent any
+  stages {
+    stage('build') {
+      steps {
+        sh 'CYPRESS_CACHE_FOLDER=$HOME/.cache/Cypress yarn install'
+      }
     }
-    stage('install dependencies') {
-        sh 'yarn install'
+    stage('test') {
+      steps {
+        sh 'CYPRESS_CACHE_FOLDER=$HOME/.cache/Cypress yarn test'
+      }
     }
-    stage('run tests') {
-      
-      sh 'yarn run test'
-    }
+  }
+}
