@@ -1,4 +1,4 @@
-describe ('Clicks on Login', function(){
+describe ('Clicks on Login C10', function(){
     // Valid Data
       it("Login Successful C1", function(){
         cy.visit('https://www.phptravels.net/login')
